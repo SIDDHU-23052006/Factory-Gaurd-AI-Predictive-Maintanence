@@ -1,0 +1,24 @@
+# Environments
+venv/
+env/
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Data (Ignore large CSV files)
+data/
+*.csv
+
+# Models (Ignore large ML models)
+models/
+*.pkl
+
+# Reports
+reports/
+
+# OS Files
+.DS_Store
+Thumbs.db
