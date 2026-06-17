@@ -1,17 +1,17 @@
-# 🏭 Factory Guard: AI-Driven Predictive Maintenance System
+# Factory Guard: AI-Driven Predictive Maintenance System
 
-[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg)](https://www.python.org/)
-[![Framework](https://img.shields.io/badge/framework-Flask-lightgrey.svg)](https://flask.palletsprojects.com/)
-[![ML Engine](https://img.shields.io/badge/ML%20Engine-XGBoost-orange.svg)](https://xgboost.readthedocs.io/)
-[![Optimization](https://img.shields.io/badge/optimization-Optuna-green.svg)](https://optuna.org/)
-[![Explainability](https://img.shields.io/badge/explainability-SHAP-red.svg)](https://shap.readthedocs.io/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python Version](https://img.shields.io/badge/python-3.8%2B-blue.svg?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/framework-Flask-lightgrey.svg?style=flat-square&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![XGBoost](https://img.shields.io/badge/ML%20Engine-XGBoost-orange.svg?style=flat-square&logo=scikit-learn&logoColor=white)](https://xgboost.readthedocs.io/)
+[![Optuna](https://img.shields.io/badge/optimization-Optuna-green.svg?style=flat-square)](https://optuna.org/)
+[![SHAP](https://img.shields.io/badge/explainability-SHAP-red.svg?style=flat-square)](https://shap.readthedocs.io/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
 
 An end-to-end Machine Learning and IoT simulation system that forecasts factory machine breakdowns up to **24 hours in advance**. Using real-time stream simulation of IoT sensor data (temperature, vibration, and pressure), Factory Guard calculates rolling window health metrics and deploys an optimized XGBoost classifier to predict failures before they happen—allowing operators to schedule maintenance and prevent costly production downtime.
 
 ---
 
-## 🎯 Business Value & Key Metrics
+## Business Value & Key Metrics
 
 In industrial settings, machine downtime costs thousands of dollars per minute, but false alarms also waste expensive technician time. Factory Guard is designed to balance this trade-off using **Precision-Recall AUC optimization** for rare events.
 
@@ -23,7 +23,7 @@ In industrial settings, machine downtime costs thousands of dollars per minute, 
 
 ---
 
-## ⚙️ System Architecture & Data Pipeline
+## System Architecture & Data Pipeline
 
 The project implements a complete ML lifecycle pipeline, from synthetic IoT sensor generation to real-time API prediction:
 
@@ -45,7 +45,7 @@ flowchart TD
 
 ---
 
-## 📊 Performance & Diagnostics Visualizations
+## Performance & Diagnostics Visualizations
 
 These plots are generated during the pipeline run and show the model's reliability:
 
@@ -90,7 +90,7 @@ Predictive maintenance models require operator trust. By using **XGBoost Gain Fe
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```directory
 Factory-Guard/
@@ -111,7 +111,7 @@ Factory-Guard/
 
 ---
 
-## 🚀 Setup & Execution Guide
+## Setup & Execution Guide
 
 ### 1. Install Dependencies
 Ensure you have Python 3.8+ installed. Install the requirements:
@@ -139,7 +139,7 @@ python src/model_training.py
 
 ---
 
-## 🔌 API Demonstration & Real-Time Alerting
+## API Demonstration & Real-Time Alerting
 
 Start the inference server and simulate real-time sensor streams to view the system alerts:
 
@@ -173,7 +173,7 @@ Spike Reading 5 | [DANGER] Machine M_001 is predicted to FAIL within 24 hours! (
 
 ---
 
-## 💡 Production Considerations & Future Enhancements
+## Production Considerations & Future Enhancements
 For full enterprise deployment, this architecture can be scaled with:
 1. **Redis Cache:** Replace the Flask in-memory buffer with Redis to store rolling sensor history.
 2. **Dockerization:** Containerize the Flask service with a WSGI server (Gunicorn) for horizontal scaling.
